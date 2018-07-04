@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PhotoCredit from './PhotoCredit';
+import UploadFiles from './UploadFiles';
 
 import { default as GrommetApp } from 'grommet/components/App';
 import Header from 'grommet/components/Header';
@@ -12,8 +13,6 @@ import TextInput from 'grommet/components/TextInput';
 import Paragraph from 'grommet/components/Paragraph';
 import Tiles from 'grommet/components/Tiles';
 import Tile from 'grommet/components/Tile';
-import Add from 'grommet/components/icons/base/Add';
-import Pulse from 'grommet/components/icons/Pulse';
 import Close from 'grommet/components/icons/base/Close';
 
 class App extends Component {
@@ -43,10 +42,7 @@ class App extends Component {
                   Send up to 20GB of files at a time in a simple way.
                 </Paragraph>
                 <hr/>
-                <Box direction={'row'} align={'center'} responsive={false}>
-                  <Pulse icon={<Add />}></Pulse>
-                  <span style={{ marginLeft: 10 }}>Add your files</span>
-                </Box>
+                <UploadFiles />
                 <Tiles fill={true} direction={'column'} flush={false} size={'small'} pad={'none'}>
                   {
                     (this.state.files.map((file, i) => (
