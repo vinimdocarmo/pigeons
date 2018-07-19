@@ -7,6 +7,7 @@ import { default as GrommetApp } from 'grommet/components/App';
 import Box from 'grommet/components/Box';
 import Footer from 'grommet/components/Footer';
 import AppCredit from './AppCredit';
+import GithubCorner from './GithubCorner';
 
 const Router = () => (
   <GrommetApp centered={false} style={{ position: 'relative' }}>
@@ -21,6 +22,7 @@ const Router = () => (
         <AppCredit />
       </Footer>
     </Box>
+    <GithubCorner />
   </GrommetApp>
 );
 
