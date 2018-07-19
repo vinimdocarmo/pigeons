@@ -12,43 +12,58 @@ import TextInput from 'grommet/components/TextInput';
 import Paragraph from 'grommet/components/Paragraph';
 
 class App extends Component {
+  state = {
+    files: []
+  };
 
-  constructor() {
-    super();
+  addFile = file => {
+    const { files } = this.state;
+    this.setState({ files: [...files, file] });
+  };
 
-    this.state = {
-      files: [
-        { name: 'My First file.png', size: '500MB', type: 'png' },
-        { name: 'Paris Photo.jpg', size: '50KB', type: 'jpg' },
-      ]
-    };
-  }
+  removeFile = file => {
+    const { files } = this.state;
+    const index = files.indexOf(file);
+
+    if (index === -1) {
+      return;
+    }
+
+    files.splice(index, 1);
+
+    this.setState({ files });
+  };
 
   render() {
     return (
       <GrommetApp centered={false} style={{ position: 'relative' }}>
         <Box full={'vertical'} texture={'/pigeons.jpg'}>
-          <Box full={'vertical'} justify={'center'} direction={'column'} align={'center'} pad={'small'}>
+          <Box
+            full={'vertical'}
+            justify={'center'}
+            direction={'column'}
+            align={'center'}
+            pad={'small'}
+          >
             <Form onSubmit={() => {}}>
               <Box colorIndex={'neutral-1-a'} pad={'medium'}>
                 <Paragraph style={{ fontWeight: 500 }} size={'large'}>
                   Send up to 20GB of files at a time in a simple way.
                 </Paragraph>
-                <hr/>
-                <UploadFiles />
-                <FileList files={this.state.files} />
+                <hr />
+                <UploadFiles addFile={this.addFile} />
+                <FileList files={this.state.files} removeFile={this.removeFile} />
               </Box>
-              
-              <FormField label='Email to'>
+
+              <FormField label="Email to">
                 <TextInput />
               </FormField>
-              <FormField label='Your email'>
+              <FormField label="Your email">
                 <TextInput />
               </FormField>
-              <FormField label='Message'>
+              <FormField label="Message">
                 <TextInput />
               </FormField>
-              
             </Form>
           </Box>
         </Box>
