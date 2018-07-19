@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Router from './Router';
 import './index.css';
 import '../node_modules/grommet-css'
 
 ReactDOM.render(
-  <App />,
+  <Router />,
   document.getElementById('root')
 );
