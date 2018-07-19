@@ -1,6 +1,7 @@
 import React from 'react';
 import Tile from 'grommet/components/Tile';
 import Close from 'grommet/components/icons/base/Close';
+import PropTypes from 'prop-types';
 
 const FileItem = props => (
   <Tile wide={true} direction={'row'} justify={'between'} responsive={false}>
@@ -15,5 +16,13 @@ const FileItem = props => (
     </div>
   </Tile>
 );
+
+FileItem.propTypes = {
+  file: PropTypes.shape({
+    size: PropTypes.string,
+    type: PropTypes.string,
+    name: PropTypes.string
+  })
+};
 
 export default FileItem;

@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Tiles from 'grommet/components/Tiles';
 import FileItem from './FileItem';
 
 export default class FileList extends Component {
+  static propTypes = {
+    removeFile: PropTypes.func,
+    files: PropTypes.array
+  };
+
   render() {
     const { files } = this.props;
 
