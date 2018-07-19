@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 import Tiles from 'grommet/components/Tiles';
-import Tile from 'grommet/components/Tile';
-import Close from 'grommet/components/icons/base/Close';
 import FileItem from './FileItem';
 
 export default class FileList extends Component {

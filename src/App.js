@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import PhotoCredit from './PhotoCredit';
+import AppCredit from './AppCredit';
 import UploadFiles from './UploadFiles';
 import FileList from './FileList';
 
@@ -10,6 +10,7 @@ import Form from 'grommet/components/Form';
 import FormField from 'grommet/components/FormField';
 import TextInput from 'grommet/components/TextInput';
 import Paragraph from 'grommet/components/Paragraph';
+import Footer from 'grommet/components/Footer';
 
 class App extends Component {
   state = {
@@ -66,8 +67,10 @@ class App extends Component {
               </FormField>
             </Form>
           </Box>
+          <Footer justify="center" direction="row">
+            <AppCredit />
+          </Footer>
         </Box>
-        <PhotoCredit />
       </GrommetApp>
     );
   }
