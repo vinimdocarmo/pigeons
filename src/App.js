@@ -67,7 +67,7 @@ class App extends Component {
               </FormField>
             </Form>
           </Box>
-          <Footer justify="center" direction="row">
+          <Footer justify="center" direction="row" responsive={true}>
             <AppCredit />
           </Footer>
         </Box>
