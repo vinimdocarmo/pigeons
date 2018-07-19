@@ -5,8 +5,6 @@ import UploadFiles from './UploadFiles';
 import FileList from './FileList';
 
 import { default as GrommetApp } from 'grommet/components/App';
-import Header from 'grommet/components/Header';
-import Title from 'grommet/components/Title';
 import Box from 'grommet/components/Box';
 import Form from 'grommet/components/Form';
 import FormField from 'grommet/components/FormField';
@@ -30,9 +28,6 @@ class App extends Component {
     return (
       <GrommetApp centered={false} style={{ position: 'relative' }}>
         <Box full={'vertical'} texture={'/pigeons.jpg'}>
-          <Header appCentered={true} colorIndex={'grey-3-a'}>
-            <Title style={{color: 'white'}}>🐦 Pigeons</Title>
-          </Header>
           <Box full={'vertical'} justify={'center'} direction={'column'} align={'center'} pad={'small'}>
             <Form onSubmit={() => {}}>
               <Box colorIndex={'neutral-1-a'} pad={'medium'}>

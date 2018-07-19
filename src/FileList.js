@@ -6,20 +6,12 @@ import Close from 'grommet/components/icons/base/Close';
 
 export default class FileList extends Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            files: props.files
-        };
-    }
-
     onFileRemovedHandler(file) {
         
     }
 
     render() {
-        const { files } = this.state;
+        const { files } = this.props;
 
         return (
             <Tiles fill={true} direction={'column'} flush={false} size={'small'} pad={'none'}>
