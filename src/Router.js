@@ -7,6 +7,7 @@ import { default as GrommetApp } from 'grommet/components/App';
 import Box from 'grommet/components/Box';
 import Footer from 'grommet/components/Footer';
 import AppCredit from './AppCredit';
+import DownloadFilesContainer from './DownloadFilesContainer';
 
 const Router = () => (
   <GrommetApp centered={false} style={{ position: 'relative' }}>
@@ -14,6 +15,7 @@ const Router = () => (
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={App} />
+          <Route exact path="/download/:token" component={DownloadFilesContainer} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
