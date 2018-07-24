@@ -4,10 +4,12 @@ import UploadFiles from './UploadFiles';
 import FileList from './FileList';
 
 import Box from 'grommet/components/Box';
+import Button from 'grommet/components/Button';
 import Form from 'grommet/components/Form';
 import FormField from 'grommet/components/FormField';
 import TextInput from 'grommet/components/TextInput';
 import Paragraph from 'grommet/components/Paragraph';
+import Send from 'grommet/components/icons/base/Send';
 
 class App extends Component {
   state = {
@@ -61,6 +63,9 @@ class App extends Component {
             <FormField label="Message">
               <TextInput />
             </FormField>
+            <Box margin={{ top: 'small' }}>
+              <Button primary={true} type="submit" label="Send" fill={true} icon={<Send />} />
+            </Box>
           </Form>
         </Box>
       </Fragment>

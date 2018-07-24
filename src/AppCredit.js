@@ -15,7 +15,7 @@ const AppCredit = () => (
       <span role="img" aria-label="Coffee emoji">
         ☕️
       </span>
-      by{' '}
+      {' by '}
       <a
         title="Twitter account of @vinimdocarmo"
         href="https://twitter.com/vinimdocarmo"
@@ -41,7 +41,7 @@ const AppCredit = () => (
       <span role="img" aria-label="Coffee emoji">
         📷
       </span>
-      <span>Fraser Cottrell</span>
+      <span> Fraser Cottrell</span>
     </a>
   </Fragment>
 );
