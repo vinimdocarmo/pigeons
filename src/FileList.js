@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Tiles from 'grommet/components/Tiles';
 import FileItem from './FileItem';
 
-export default class FileList extends Component {
+class FileList extends Component {
   static propTypes = {
     removeFile: PropTypes.func,
     files: PropTypes.array
@@ -22,3 +22,5 @@ export default class FileList extends Component {
     );
   }
 }
+
+export default FileList;
