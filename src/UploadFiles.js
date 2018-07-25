@@ -5,7 +5,7 @@ import Add from 'grommet/components/icons/base/Add';
 import Pulse from 'grommet/components/icons/Pulse';
 import Box from 'grommet/components/Box';
 
-export default class UploadFiles extends Component {
+class UploadFiles extends Component {
   static propTypes = {
     addFile: PropTypes.func
   };
@@ -25,3 +25,5 @@ export default class UploadFiles extends Component {
     );
   }
 }
+
+export default UploadFiles;
