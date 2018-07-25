@@ -8,7 +8,7 @@ import Paragraph from 'grommet/components/Paragraph';
 import Box from 'grommet/components/Box';
 import Button from 'grommet/components/Button';
 import Send from 'grommet/components/icons/base/Send';
-import BoxHoC from './hoc/BoxHoC';
+import CenteredBox from './CenteredBox';
 
 class SenderForm extends Component {
   state = {
@@ -35,32 +35,34 @@ class SenderForm extends Component {
 
   render() {
     return (
-      <Form onSubmit={() => {}}>
-        <Box colorIndex={'neutral-1-a'} pad={'medium'}>
-          <Paragraph style={{ fontWeight: 500 }} size={'large'}>
-            Send up to 20GB of files at a time in a simple way.
-          </Paragraph>
-          <hr />
-          <UploadFiles addFile={this.addFile} />
-          <FileList files={this.state.files} removeFile={this.removeFile} />
-        </Box>
+      <CenteredBox>
+        <Form onSubmit={() => {}}>
+          <Box colorIndex={'neutral-1-a'} pad={'medium'}>
+            <Paragraph style={{ fontWeight: 500 }} size={'large'}>
+              Send up to 20GB of files at a time in a simple way.
+            </Paragraph>
+            <hr />
+            <UploadFiles addFile={this.addFile} />
+            <FileList files={this.state.files} removeFile={this.removeFile} />
+          </Box>
 
-        <FormField label="Email to">
-          <TextInput />
-        </FormField>
-        <FormField label="Your email">
-          <TextInput />
-        </FormField>
-        <FormField label="Message">
-          <TextInput />
-        </FormField>
+          <FormField label="Email to">
+            <TextInput />
+          </FormField>
+          <FormField label="Your email">
+            <TextInput />
+          </FormField>
+          <FormField label="Message">
+            <TextInput />
+          </FormField>
 
-        <Box margin={{ top: 'small' }}>
-          <Button primary={true} type="submit" label="Send" fill={true} icon={<Send />} />
-        </Box>
-      </Form>
+          <Box margin={{ top: 'small' }}>
+            <Button primary={true} type="submit" label="Send" fill={true} icon={<Send />} />
+          </Box>
+        </Form>
+      </CenteredBox>
     );
   }
 }
 
-export default BoxHoC(SenderForm);
+export default SenderForm;

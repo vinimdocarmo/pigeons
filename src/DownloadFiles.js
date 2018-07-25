@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-import Box from 'grommet/components/Box';
+import CenteredBox from './CenteredBox';
 
 export default class DownloadFiles extends Component {
   static propTypes = {
@@ -10,9 +9,9 @@ export default class DownloadFiles extends Component {
 
   render() {
     return (
-        <Box full={'vertical'} justify={'center'} align={'center'}>
-            {this.props.files.map(file => <div>{file.name}</div>)}
-        </Box>
+      <CenteredBox>
+        {this.props.files.map(file => <div>{file.name}</div>)}
+      </CenteredBox>
     );
   }
 }

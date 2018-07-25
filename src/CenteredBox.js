@@ -1,12 +1,10 @@
 import React from 'react';
 import Box from 'grommet/components/Box';
 
-const BoxHoC = Component => {
-  return props => (
+const CenteredBox = ({ children }) => (
     <Box full={'vertical'} justify={'center'} direction={'column'} align={'center'} pad={'small'}>
-      <Component {...props} />
+      {children}
     </Box>
-  );
-};
+);
 
-export default BoxHoC;
+export default CenteredBox;
