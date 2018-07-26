@@ -1,6 +1,5 @@
 import React from 'react';
 import Tile from 'grommet/components/Tile';
-import Close from 'grommet/components/icons/base/Close';
 import PropTypes from 'prop-types';
 
 const FileItem = props => (
@@ -12,13 +11,17 @@ const FileItem = props => (
       </div>
     </div>
     <div>
-      <Close onClick={() => props.removeFile(props.file)} style={{ cursor: 'pointer' }} />
+      {props.icon}
     </div>
   </Tile>
 );
 
 FileItem.propTypes = {
-  file: PropTypes.instanceOf(File)
+  file: PropTypes.shape({ 
+    name: PropTypes.string, 
+    size: PropTypes.string, 
+    type: PropTypes.string 
+  })
 };
 
 export default FileItem;

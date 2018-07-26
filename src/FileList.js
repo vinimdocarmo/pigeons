@@ -1,26 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
 import Tiles from 'grommet/components/Tiles';
-import FileItem from './FileItem';
 
-class FileList extends Component {
-  static propTypes = {
-    removeFile: PropTypes.func,
-    files: PropTypes.arrayOf(PropTypes.instanceOf(File))
-  };
-
-  render() {
-    const { files } = this.props;
-
-    return (
-      <Tiles fill={true} direction={'column'} flush={false} size={'small'} pad={'none'}>
-        {files.map((file, i) => (
-          <FileItem key={i} file={file} removeFile={this.props.removeFile} />
-        ))}
-      </Tiles>
-    );
-  }
-}
+const FileList = (props) => (
+  <Tiles fill={true} direction={'column'} flush={false} size={'small'} pad={'none'}>
+    {props.children}
+  </Tiles>
+);
 
 export default FileList;
