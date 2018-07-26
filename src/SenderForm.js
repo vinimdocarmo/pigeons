@@ -16,7 +16,7 @@ class SenderForm extends Component {
   };
 
   setFiles = files => {
-    this.setState({ files });
+    this.setState({ files: [...this.state.files, ...files] });
   };
 
   removeFile = file => {
