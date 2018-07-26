@@ -7,7 +7,7 @@ import FileItem from './FileItem';
 class FileList extends Component {
   static propTypes = {
     removeFile: PropTypes.func,
-    files: PropTypes.array
+    files: PropTypes.arrayOf(PropTypes.instanceOf(File))
   };
 
   render() {

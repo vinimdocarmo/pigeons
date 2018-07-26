@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UploadFiles from './UploadFiles';
+import CustomInputFile from './CustomInputFile';
 import FileList from './FileList';
 import Form from 'grommet/components/Form';
 import FormField from 'grommet/components/FormField';
@@ -15,9 +15,8 @@ class SenderForm extends Component {
     files: []
   };
 
-  addFile = file => {
-    const { files } = this.state;
-    this.setState({ files: [...files, file] });
+  setFiles = files => {
+    this.setState({ files });
   };
 
   removeFile = file => {
@@ -42,7 +41,7 @@ class SenderForm extends Component {
               Send up to 20GB of files at a time in a simple way.
             </Paragraph>
             <hr />
-            <UploadFiles addFile={this.addFile} />
+            <CustomInputFile onChange={this.setFiles} />
             <FileList files={this.state.files} removeFile={this.removeFile} />
           </Box>
 

@@ -18,11 +18,7 @@ const FileItem = props => (
 );
 
 FileItem.propTypes = {
-  file: PropTypes.shape({
-    size: PropTypes.string,
-    type: PropTypes.string,
-    name: PropTypes.string
-  })
+  file: PropTypes.instanceOf(File)
 };
 
 export default FileItem;
